@@ -17,5 +17,3 @@ def index():
 @app.route('/api/time')
 def get_current_time():
     return {'time': time.time()}
-
-app.run()
