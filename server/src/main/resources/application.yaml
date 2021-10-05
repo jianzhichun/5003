@@ -1,0 +1,19 @@
+magic-api:
+  web: /web
+  resource:
+    type: database
+    tableName: magic_api_file
+    prefix: /magic-api
+    readonly: false
+  cluster-config:
+    enable: true 
+spring:
+  redis:
+    host: redis
+    port: 6379
+  datasource:
+    url: jdbc:mysql://mysql:3306/magic?serverTimezone=Asia/Shanghai
+    username: root
+    password: ${MYSQL_ROOT_PASSWORD:123456}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+logging.file.name: /opt/log/server.log
