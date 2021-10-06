@@ -3,4 +3,3 @@ application.yml
 .vscode
 node_modules/
 yarn.lock
-infrastructure/frontend/editor

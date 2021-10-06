@@ -1,0 +1,1 @@
+{"id":"1","icon":"fa fa-file","path":"hello-world","label":"Hello world","schema":{"type":"page","title":"Hello world","body":[{"type":"tpl","tpl":"init page","inline":false},{"type":"crud","api":"","columns":[{"name":"id","label":"ID","type":"text"},{"name":"engine","label":"渲染引擎","type":"text"}],"bulkActions":[],"itemActions":[]}]}}

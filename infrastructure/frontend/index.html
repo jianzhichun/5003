@@ -27,10 +27,17 @@
   <script src="https://cdn.jsdelivr.net/npm/amis@1.3.0/sdk/sdk.js"></script>
   <script type="module">
     "use strict";
-    import index from '/metadata/ui/index.js';
     (function () {
       let amis = amisRequire('amis/embed');
-      let amisScoped = amis.embed('#root', index);
+      var xhr = new XMLHttpRequest();
+      xhr.open('get', 'editor/metadata');
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          amis.embed('#root', JSON.parse(xhr.responseText)[0].schema)
+        }
+      }
+      xhr.send();
+
     })();
   </script>
 </body>

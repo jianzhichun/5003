@@ -15,6 +15,13 @@ services:
     image: redis
     volumes:
       - redis_data:/data
+  editor:
+    restart: always
+    build: ./infrastructure/frontend/editor
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./metadata/ui:/metadata
   faas:
     restart: always
     build: ./infrastructure/faas
