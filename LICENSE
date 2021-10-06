@@ -1,0 +1,9 @@
+Copyright 2019-2021, jianzhichun.
+
+Each package has its own license:
+
+infrastructure/server: MIT (follow magic-api)
+infrastructure/frontend/edit: (目前 amis-editor 未开源，但可以免费使用（包括商用))
+metadata: Apache License 2.0
+
+So, you can consider this project to be MIT licensed.
