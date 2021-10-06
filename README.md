@@ -49,3 +49,11 @@ It's a simple frontend-low-code editor, u can design ur app's ui.
 After design, u can access http://localhost:8080/ to get ur app.
 
 ![](https://cdn.jsdelivr.net/gh/jianzhichun/cdn/img/Snipaste_2021-10-06_21-05-33.png)
+
+
+### Workspace
+
+* infrastructure: the infrastructure for ur app
+* metadata: after design and develop u can find ur app's code is stored in it.
+  * /api: the magic-api's data (server metadata)
+  * /ui: the amis's data (frontend metadata)
