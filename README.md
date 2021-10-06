@@ -1,6 +1,6 @@
 ### MAGIC-AMIS
 
-This is just a project for cityu's 5003 course firstly. However, maybe it is useful and creative.
+This is just a project for cityu's 5003 course firstly. However, maybe it is useful and creative. <br/>
 This is a faas + frontend-low-code based on magic-api and amis. 
 
 #### Quick Start
