@@ -9,7 +9,7 @@
         "setup": "node ./bin/setup.js",
         "bootstrap": "lerna bootstrap",
         "kill-port": "kill-port 8080",
-        "start": "yarn setup && yarn kill-port && yarn bootstrap && docker-compose up -d",
+        "start": "npm run setup && npm run kill-port && npm run bootstrap && docker-compose up -d",
         "stop": "docker-compose down -v --remove-orphans"
     }
 }
