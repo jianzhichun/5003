@@ -13,6 +13,7 @@ MAGIC_USER=admin
 MAGIC_PASSWORD=123456
 PMA_ABSOLUTE_URI=http://localhost:8080/mysql/
 HTML_PATH=./infrastructure/frontend/dist" > .env
+# U need install a stable node&npm
 npm i && npm run start
 ```
 
