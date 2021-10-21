@@ -38,7 +38,7 @@ services:
     restart: always
     build: ./infrastructure/mysql
     volumes:
-      - mysql_data:/var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
     environment:
       - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
       - "TZ=${MYSQL_TZ}"
@@ -59,6 +59,4 @@ volumes:
   redis_data:
     driver: local
   faas_log:
-    driver: local
-  mysql_data:
     driver: local
