@@ -5,7 +5,7 @@
   "groupId" : "f8a48b72b2fe4a8fb5e40655c718ed1b",
   "name" : "login",
   "createTime" : null,
-  "updateTime" : 1634820918568,
+  "updateTime" : 1634821154587,
   "lock" : "0",
   "method" : "POST",
   "path" : "/login",
@@ -38,7 +38,7 @@
   "requestBody" : "{}",
   "headers" : [ ],
   "paths" : [ ],
-  "responseBody" : "{\n    \"code\": 1,\n    \"message\": \"success\",\n    \"data\": {\n        \"tokenName\": \"satoken\",\n        \"tokenValue\": \"dc2f1ed7-4279-4012-a0b8-90fc762c1bbe\",\n        \"isLogin\": true,\n        \"loginId\": \"2\",\n        \"loginType\": \"login\",\n        \"tokenTimeout\": 2592000,\n        \"sessionTimeout\": 2592000,\n        \"tokenSessionTimeout\": -2,\n        \"tokenActivityTimeout\": -1,\n        \"loginDevice\": \"default-device\",\n        \"tag\": null\n    },\n    \"timestamp\": 1634818696195,\n    \"executeTime\": 10\n}",
+  "responseBody" : "{\n    \"code\": 1,\n    \"message\": \"success\",\n    \"data\": {\n        \"tokenName\": \"satoken\",\n        \"tokenValue\": \"95ee786e-33a2-480f-a1f2-22db944d3654\",\n        \"isLogin\": true,\n        \"loginId\": \"2\",\n        \"loginType\": \"login\",\n        \"tokenTimeout\": 2592000,\n        \"sessionTimeout\": 2592000,\n        \"tokenSessionTimeout\": -2,\n        \"tokenActivityTimeout\": -1,\n        \"loginDevice\": \"default-device\",\n        \"tag\": null\n    },\n    \"timestamp\": 1634820918607,\n    \"executeTime\": 19\n}",
   "description" : null,
   "requestBodyDefinition" : null,
   "responseBodyDefinition" : {
@@ -101,7 +101,7 @@
         "children" : [ ]
       }, {
         "name" : "tokenValue",
-        "value" : "dc2f1ed7-4279-4012-a0b8-90fc762c1bbe",
+        "value" : "95ee786e-33a2-480f-a1f2-22db944d3654",
         "description" : "",
         "required" : false,
         "dataType" : "String",
@@ -222,7 +222,7 @@
       } ]
     }, {
       "name" : "timestamp",
-      "value" : "1634818696195",
+      "value" : "1634820918607",
       "description" : "",
       "required" : false,
       "dataType" : "Long",
@@ -234,7 +234,7 @@
       "children" : [ ]
     }, {
       "name" : "executeTime",
-      "value" : "10",
+      "value" : "19",
       "description" : "",
       "required" : false,
       "dataType" : "Integer",
