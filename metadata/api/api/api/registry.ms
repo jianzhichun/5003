@@ -5,7 +5,7 @@
   "groupId" : "f8a48b72b2fe4a8fb5e40655c718ed1b",
   "name" : "registry",
   "createTime" : null,
-  "updateTime" : 1634818518740,
+  "updateTime" : 1634984165965,
   "lock" : "0",
   "method" : "POST",
   "path" : "/registry",
@@ -127,7 +127,7 @@ import '@/util/aesEncrypt' as aesEncrypt;
 
 return db.table('user')
     .primary('id')
-    .save({
+    .save({ 
         email: email,
         name: email,
         password: aesEncrypt(password)

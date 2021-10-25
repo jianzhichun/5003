@@ -5,7 +5,7 @@
   "groupId" : "f8a48b72b2fe4a8fb5e40655c718ed1b",
   "name" : "logout",
   "createTime" : null,
-  "updateTime" : 1634819932547,
+  "updateTime" : 1635166967073,
   "lock" : "0",
   "method" : "GET",
   "path" : "/logout",

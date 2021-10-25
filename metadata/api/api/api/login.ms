@@ -5,7 +5,7 @@
   "groupId" : "f8a48b72b2fe4a8fb5e40655c718ed1b",
   "name" : "login",
   "createTime" : null,
-  "updateTime" : 1634821154587,
+  "updateTime" : 1635167902684,
   "lock" : "0",
   "method" : "POST",
   "path" : "/login",
@@ -38,7 +38,7 @@
   "requestBody" : "{}",
   "headers" : [ ],
   "paths" : [ ],
-  "responseBody" : "{\n    \"code\": 1,\n    \"message\": \"success\",\n    \"data\": {\n        \"tokenName\": \"satoken\",\n        \"tokenValue\": \"95ee786e-33a2-480f-a1f2-22db944d3654\",\n        \"isLogin\": true,\n        \"loginId\": \"2\",\n        \"loginType\": \"login\",\n        \"tokenTimeout\": 2592000,\n        \"sessionTimeout\": 2592000,\n        \"tokenSessionTimeout\": -2,\n        \"tokenActivityTimeout\": -1,\n        \"loginDevice\": \"default-device\",\n        \"tag\": null\n    },\n    \"timestamp\": 1634820918607,\n    \"executeTime\": 19\n}",
+  "responseBody" : "{\n    \"code\": 1,\n    \"message\": \"success\",\n    \"data\": {\n        \"tokenName\": \"satoken\",\n        \"tokenValue\": \"28a8186d-3062-4994-8e74-a311224aaac8\",\n        \"isLogin\": true,\n        \"loginId\": \"2\",\n        \"loginType\": \"login\",\n        \"tokenTimeout\": 2592000,\n        \"sessionTimeout\": 2592000,\n        \"tokenSessionTimeout\": -2,\n        \"tokenActivityTimeout\": -1,\n        \"loginDevice\": \"default-device\",\n        \"tag\": null\n    },\n    \"timestamp\": 1635167135392,\n    \"executeTime\": 10\n}",
   "description" : null,
   "requestBodyDefinition" : null,
   "responseBodyDefinition" : {
@@ -101,7 +101,7 @@
         "children" : [ ]
       }, {
         "name" : "tokenValue",
-        "value" : "95ee786e-33a2-480f-a1f2-22db944d3654",
+        "value" : "28a8186d-3062-4994-8e74-a311224aaac8",
         "description" : "",
         "required" : false,
         "dataType" : "String",
@@ -222,7 +222,7 @@
       } ]
     }, {
       "name" : "timestamp",
-      "value" : "1634820918607",
+      "value" : "1635167135392",
       "description" : "",
       "required" : false,
       "dataType" : "Long",
@@ -234,7 +234,7 @@
       "children" : [ ]
     }, {
       "name" : "executeTime",
-      "value" : "19",
+      "value" : "10",
       "description" : "",
       "required" : false,
       "dataType" : "Integer",
@@ -260,6 +260,6 @@ assert null != user: 400, 'Invalid email or password.'
 
 StpUtil.login(user.id)
 user.remove('password') 
-StpUtil.getSession().set("user", user);
+StpUtil.getSession().set("user", user)
 
 return StpUtil.getTokenInfo()

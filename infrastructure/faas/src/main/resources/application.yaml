@@ -4,6 +4,19 @@ magic-api:
   security-config:
     username: ${MAGIC_USER:admin}
     password: ${MAGIC_PASSWORD:123456}
+  response-code-config:
+    success: 0 #执行成功的code值
+  response: |- #配置JSON格式，格式为magic-script中的表达式
+    {
+      code: code,
+      status: code,
+      message: message,
+      msg: message,
+      data,
+      timestamp,
+      requestTime,
+      executeTime,
+    }
 
 spring:
   redis:

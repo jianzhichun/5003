@@ -28,12 +28,38 @@
   <script type="module">
     "use strict";
     (function () {
+      function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+          var pair = vars[i].split("=");
+          if (pair[0] == variable) { return pair[1]; }
+        }
+        return (false);
+      }
       let amis = amisRequire('amis/embed');
       var xhr = new XMLHttpRequest();
       xhr.open('get', 'editor/metadata');
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-          amis.embed('#root', JSON.parse(xhr.responseText)[0].schema)
+          let pages = JSON.parse(xhr.responseText);
+          if (Array.isArray(pages)) {
+            let pathId = getQueryVariable('pathId');
+            let page;
+            let indexPages = pages.filter(page => page.path === 'index')
+            if (indexPages.length > 0) {
+              page = indexPages[0]
+            } else {
+              page = pages[0];
+            }
+            for (let i = 0; pathId && i < pages.length; i++) {
+              if (pages[i].path === pathId) {
+                page = pages[i];
+                break;
+              }
+            }
+            amis.embed('#root', page.schema, { locale: 'en-US' });
+          }
         }
       }
       xhr.send();
