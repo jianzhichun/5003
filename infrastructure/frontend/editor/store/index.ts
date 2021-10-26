@@ -102,17 +102,24 @@ export const MainStore = types
                 // persist store
                 if (typeof window !== 'undefined' && window.localStorage) {
                     const storeData = window.localStorage.getItem('store');
-                    const pages = await self.fetcher({ url: "metadata", method: "get" });
+                    const pages: { data: any[] } = await self.fetcher({ url: "metadata", method: "get" });
+                    pages.data.forEach(page => {
+                        if (page.id > pagIndex) {
+                            pagIndex = page.id;
+                        }
+                    });
                     let storeDataJson = storeData ? JSON.parse(storeData) : null
                     if (storeDataJson) {
-                        let tmp:any[] = []
-                        applySnapshot(self, { ...storeDataJson, pages: [...pages.data, ...storeDataJson.pages].filter(({id}) => {
-                            if (tmp.indexOf(id) == -1) {
-                                tmp.push(id)
-                                return true
-                            }
-                            return false
-                        }) })
+                        let tmp: any[] = []
+                        applySnapshot(self, {
+                            ...storeDataJson, pages: [...pages.data, ...storeDataJson.pages].filter(({ id }) => {
+                                if (tmp.indexOf(id) == -1) {
+                                    tmp.push(id)
+                                    return true
+                                }
+                                return false
+                            })
+                        })
                     };
 
                     reaction(
