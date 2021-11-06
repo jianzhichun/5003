@@ -3,7 +3,7 @@
 #
 FROM node:14.16.0-alpine3.12 AS build
 COPY . /home/app
-RUN cd /home/app && npm i && npm run gh-pages
+RUN cd /home/app && npm i && npm rebuild && npm run gh-pages
 
 #
 # Package stage
