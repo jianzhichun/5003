@@ -12,7 +12,7 @@
         "@fortawesome/fontawesome-free": "^5.15.3",
         "amis": "1.2.4-beta.5",
         "amis-editor": "3.3.6-beta.11",
-        "axios": "0.21.1",
+        "axios": "0.24.0",
         "body-parser": "^1.19.0",
         "bootstrap": "3.4.1",
         "copy-to-clipboard": "^3.2.0",
